@@ -1,0 +1,11 @@
+mutation singleUpload($file: Upload!) {
+  singleUpload(file: $file) {
+    url
+  }
+}
+
+mutation multipleUpload($files: [Upload!]!) {
+  multipleUpload(files: $files) {
+    urls
+  }
+}

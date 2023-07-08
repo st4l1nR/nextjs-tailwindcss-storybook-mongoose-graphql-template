@@ -1,0 +1,31 @@
+query ListAuthor {
+  listAuthor {
+    name
+  }
+}
+
+query GetAuthorById($id: ID!) {
+  getAuthorById(_id: $id) {
+    _id
+    name
+  }
+}
+mutation CreateAuthor($createAuthorInput: createAuthorInput!) {
+  createAuthor(createAuthorInput: $createAuthorInput) {
+    _id
+    name
+  }
+}
+
+mutation UpdateAuthor($updateAuthorInput: updateAuthorInput!) {
+  updateAuthor(updateAuthorInput: $updateAuthorInput) {
+    _id
+  }
+}
+
+mutation DeleteAuthor($deleteAuthorId2: ID!) {
+  deleteAuthor(_id: $deleteAuthorId2) {
+    _id
+    name
+  }
+}
